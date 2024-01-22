@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Pasangan</title>
+    <style>
+        body {
+            background-color: #D63484;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #FF9BD2;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 600px;
+            margin-top: 20px; /* Jarak antara dua formulir */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        fieldset {
+            margin-bottom: 15px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #F3D7CA;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #F8F4EC;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+
+        <form method="post" action="post.php">
+
+            <h2 style="text-align: center; color: #333;">Formulir Pendaftaran Pasangan</h2>
+
+            <fieldset>
+                <legend>Formulir Pasangan 1</legend>
+
+                <label for="form1-gender">Gender:</label>
+                <select name="gender[]" id="form1-gender">
+                    <option value="cewek">Cewek</option>
+                    <option value="cowok">Cowok</option>
+                </select>
+
+                <label for="form1-tanggal-lahir">Tanggal Lahir:</label>
+                <input type="date" id="form1-tanggal-lahir" name="tanggal_lahir[]" required>
+
+                <label for="form1-alamat">Alamat:</label>
+                <input type="text" id="form1-alamat" name="alamat[]" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Formulir Pasangan 2</legend>
+
+                <label for="form2-gender">Gender:</label>
+                <select name="gender[]" id="form2-gender">
+                    <option value="cewek">Cewek</option>
+                    <option value="cowok">Cowok</option>
+                </select>
+
+                <label for="form2-tanggal-lahir">Tanggal Lahir:</label>
+                <input type="date" id="form2-tanggal-lahir" name="tanggal_lahir[]" required>
+
+                <label for="form2-alamat">Alamat:</label>
+                <input type="text" id="form2-alamat" name="alamat[]" required>
+            </fieldset>
+
+            <input type="submit" value="Daftar">
+        </form>
+    </div>
+</body>
+
+</html>

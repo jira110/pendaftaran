@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Pasangan</title>
+    <style>
+        body {
+            background-color: #D63484;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #FF9BD2;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 600px;
+            margin-top: 20px; /* Jarak antara dua formulir */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Agar formulir di tengah */
+        }
+
+        fieldset {
+            margin-bottom: 15px;
+            width: 100%; /* Agar fieldset penuh lebar */
+        }
+
+        input,
+        select {
+            width: calc(100% - 16px); /* Perhitungan lebar input */
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #F3D7CA;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #F8F4EC;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <form method="get" action="get.php">
+
+            <h2 style="text-align: center; color: #333;">Pendaftaran Pasangan</h2>
+
+            <fieldset>
+                <legend>Formulir Pasangan 1</legend>
+
+                <label for="form1-nama">Nama:</label>
+                <input type="text" id="form1-nama" name="nama[]" required>
+
+                <label for="form1-tanggal-jadian">Tanggal Jadian:</label>
+                <input type="date" id="form1-tanggal-jadian" name="tanggal_jadian[]" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Formulir Pasangan 2</legend>
+
+                <label for="form2-nama">Nama:</label>
+                <input type="text" id="form2-nama" name="nama[]" required>
+
+                <label for="form2-tanggal-jadian">Tanggal Jadian:</label>
+                <input type="date" id="form2-tanggal-jadian" name="tanggal_jadian[]" required>
+            </fieldset>
+
+            <input type="submit" value="Daftar">
+        </form>
+    </div>
+</body>
+</html>
